@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario - HostingPro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h1>HostingPro</h1>
+                <button class="sidebar-close" id="sidebar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="https://via.placeholder.com/80" alt="Avatar de usuario">
+                </div>
+                <div class="user-details">
+                    <h3 id="user-name">Carlos Rodríguez</h3>
+                    <p id="user-email">carlos@ejemplo.com</p>
+                </div>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#" data-section="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Panel Principal</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="services">
+                            <i class="fas fa-server"></i>
+                            <span>Mis Servicios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="billing">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Facturación</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="support">
+                            <i class="fas fa-headset"></i>
+                            <span>Soporte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="settings">
+                            <i class="fas fa-cog"></i>
+                            <span>Configuración</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <header class="dashboard-header">
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar...">
+                </div>
+                <div class="header-actions">
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-dropdown">
+                        <img src="https://via.placeholder.com/40" alt="Avatar de usuario">
+                        <span>Carlos Rodríguez</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Panel Principal -->
+                <section class="dashboard-section active" id="dashboard">
+                    <div class="section-header">
+                        <h2>Panel Principal</h2>
+                        <p>Bienvenido de nuevo, Carlos</p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>3</h3>
+                                <p>Servicios Activos</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>1</h3>
+                                <p>Tickets Abiertos</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>€29.99</h3>
+                                <p>Próxima Factura</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3>65%</h3>
+                                <p>Uso de Almacenamiento</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-row">
+                        <div class="dashboard-card services-overview">
+                            <div class="card-header">
+                                <h3>Mis Servicios</h3>
+                                <a href="#" class="card-action" data-section="services">Ver todos</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fas fa-globe"></i>
+                                    </div>
+                                    <div class="service-info">
+                                        <h4>Hosting Web Premium</h4>
+                                        <p>Activo - Renovación: 15/06/2024</p>
+                                    </div>
+                                    <div class="service-status">
+                                        <span class="status-badge status-active">Activo</span>
+                                    </div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fas fa-cubes"></i>
+                                    </div>
+                                    <div class="service-info">
+                                        <h4>Servidor Minecraft Pro</h4>
+                                        <p>Activo - Renovación: 22/05/2024</p>
+                                    </div>
+                                    <div class="service-status">
+                                        <span class="status-badge status-active">Activo</span>
+                                    </div>
+                                </div>
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i class="fab fa-discord"></i>
+                                    </div>
+                                    <div class="service-info">
+                                        <h4>Bot Discord Básico</h4>
+                                        <p>Activo - Renovación: 10/07/2024</p>
+                                    </div>
+                                    <div class="service-status">
+                                        <span class="status-badge status-active">Activo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card recent-tickets">
+                            <div class="card-header">
+                                <h3>Tickets Recientes</h3>
+                                <a href="#" class="card-action" data-section="support">Ver todos</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="ticket-item">
+                                    <div class="ticket-info">
+                                        <h4>Problema con la base de datos</h4>
+                                        <p>Ticket #1234 - Creado: 28/04/2024</p>
+                                    </div>
+                                    <div class="ticket-status">
+                                        <span class="status-badge status-pending">Pendiente</span>
+                                    </div>
+                                </div>
+                                <div class="ticket-item">
+                                    <div class="ticket-info">
+                                        <h4>Error en la instalación de plugins</h4>
+                                        <p>Ticket #1233 - Creado: 25/04/2024</p>
+                                    </div>
+                                    <div class="ticket-status">
+                                        <span class="status-badge status-resolved">Resuelto</span>
+                                    </div>
+                                </div>
+                                <div class="ticket-item">
+                                    <div class="ticket-info">
+                                        <h4>Consulta sobre facturación</h4>
+                                        <p>Ticket #1232 - Creado: 20/04/2024</p>
+                                    </div>
+                                    <div class="ticket-status">
+                                        <span class="status-badge status-resolved">Resuelto</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-row">
+                        <div class="dashboard-card resource-usage">
+                            <div class="card-header">
+                                <h3>Uso de Recursos</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="resource-item">
+                                    <div class="resource-info">
+                                        <h4>CPU</h4>
+                                        <p>45% de uso promedio</p>
+                                    </div>
+                                    <div class="resource-bar">
+                                        <div class="progress-bar" style="width: 45%"></div>
+                                    </div>
+                                </div>
+                                <div class="resource-item">
+                                    <div class="resource-info">
+                                        <h4>RAM</h4>
+                                        <p>60% de uso promedio</p>
+                                    </div>
+                                    <div class="resource-bar">
+                                        <div class="progress-bar" style="width: 60%"></div>
+                                    </div>
+                                </div>
+                                <div class="resource-item">
+                                    <div class="resource-info">
+                                        <h4>Almacenamiento</h4>
+                                        <p>65% de uso promedio</p>
+                                    </div>
+                                    <div class="resource-bar">
+                                        <div class="progress-bar" style="width: 65%"></div>
+                                    </div>
+                                </div>
+                                <div class="resource-item">
+                                    <div class="resource-info">
+                                        <h4>Ancho de Banda</h4>
+                                        <p>30% de uso promedio</p>
+                                    </div>
+                                    <div class="resource-bar">
+                                        <div class="progress-bar" style="width: 30%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card quick-actions">
+                            <div class="card-header">
+                                <h3>Acciones Rápidas</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="actions-grid">
+                                    <a href="#" class="action-item">
+                                        <i class="fas fa-plus-circle"></i>
+                                        <span>Nuevo Servicio</span>
+                                    </a>
+                                    <a href="#" class="action-item">
+                                        <i class="fas fa-ticket-alt"></i>
+                                        <span>Nuevo Ticket</span>
+                                    </a>
+                                    <a href="#" class="action-item">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Pagar Factura</span>
+                                    </a>
+                                    <a href="#" class="action-item">
+                                        <i class="fas fa-cog"></i>
+                                        <span>Configuración</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Mis Servicios -->
+                <section class="dashboard-section" id="services">
+                    <div class="section-header">
+                        <h2>Mis Servicios</h2>
+                        <p>Gestiona tus servicios contratados</p>
+                    </div>
+
+                    <div class="services-actions">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Nuevo Servicio
+                        </button>
+                        <div class="services-filter">
+                            <select>
+                                <option value="all">Todos los servicios</option>
+                                <option value="web">Hosting Web</option>
+                                <option value="minecraft">Servidores Minecraft</option>
+                                <option value="discord">Bots Discord</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <div class="service-status">
+                                    <span class="status-badge status-active">Activo</span>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3>Hosting Web Premium</h3>
+                                <p class="service-domain">midominio.com</p>
+                                <div class="service-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Espacio:</span>
+                                        <span class="detail-value">50 GB SSD</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Ancho de banda:</span>
+                                        <span class="detail-value">Ilimitado</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Renovación:</span>
+                                        <span class="detail-value">15/06/2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Panel de Control</a>
+                                <a href="#" class="btn btn-sm btn-primary">Gestionar</a>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                                <div class="service-status">
+                                    <span class="status-badge status-active">Activo</span>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3>Servidor Minecraft Pro</h3>
+                                <p class="service-domain">mc.midominio.com</p>
+                                <div class="service-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">RAM:</span>
+                                        <span class="detail-value">8 GB</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Slots:</span>
+                                        <span class="detail-value">50 jugadores</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Renovación:</span>
+                                        <span class="detail-value">22/05/2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Panel de Control</a>
+                                <a href="#" class="btn btn-sm btn-primary">Gestionar</a>
+                            </div>
+                        </div>
+
+                        <div class="service-card">
+                            <div class="service-header">
+                                <div class="service-icon">
+                                    <i class="fab fa-discord"></i>
+                                </div>
+                                <div class="service-status">
+                                    <span class="status-badge status-active">Activo</span>
+                                </div>
+                            </div>
+                            <div class="service-content">
+                                <h3>Bot Discord Básico</h3>
+                                <p class="service-domain">HostingProBot</p>
+                                <div class="service-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">RAM:</span>
+                                        <span class="detail-value">2 GB</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Almacenamiento:</span>
+                                        <span class="detail-value">10 GB</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Renovación:</span>
+                                        <span class="detail-value">10/07/2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-actions">
+                                <a href="#" class="btn btn-sm btn-outline">Panel de Control</a>
+                                <a href="#" class="btn btn-sm btn-primary">Gestionar</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Otras secciones del panel -->
+                <section class="dashboard-section" id="billing">
+                    <div class="section-header">
+                        <h2>Facturación</h2>
+                        <p>Gestiona tus facturas y métodos de pago</p>
+                    </div>
+                    
+                    <!-- Contenido de facturación -->
+                </section>
+
+                <section class="dashboard-section" id="support">
+                    <div class="section-header">
+                        <h2>Soporte</h2>
+                        <p>Centro de ayuda y tickets de soporte</p>
+                    </div>
+                    
+                    <!-- Contenido de soporte -->
+                </section>
+
+                <section class="dashboard-section" id="settings">
+                    <div class="section-header">
+                        <h2>Configuración</h2>
+                        <p>Gestiona la configuración de tu cuenta</p>
+                    </div>
+                    
+                    <!-- Contenido de configuración -->
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
+
